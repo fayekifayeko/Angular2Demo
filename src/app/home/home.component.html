@@ -1,0 +1,16 @@
+<p>
+  {{homeTitle}}
+</p>
+<ng-content></ng-content>
+
+<input type="text" [(ngModel)]="player.name"/>
+<p>{{player.name}}</p>
+<p>{{player.belt}}</p>
+
+<input type="text" value={{myvalue}}/>
+<input type="text" [required]="myboolean" />
+<button (click)="clickMe('faaaaaaayekkkkk')">Click Me</button>
+<p>data from root </p>
+<!-- <p>{{data_from_rootcomponent_to_homecomponent.x}}</p> -->
+
+<button (click)="fireanevent($event)">fire event on root comp</button>

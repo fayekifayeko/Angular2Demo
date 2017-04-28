@@ -1,0 +1,13 @@
+<header>
+<h1>{{title}}</h1>
+<nav>
+<ul>
+<li><a routerLink="/">link1</a></li>
+<li><a routerLink="/directory">link2</a></li>
+</ul>
+</nav>
+</header>
+<section id="main">
+<!-- <app-home [data_from_rootcomponent_to_homecomponent]="data_from_rootcomponent_to_homecomponent" (event_from_home_comp_to_root)="rootfunc($event)">home loading .....</app-home> -->
+<router-outlet></router-outlet>
+</section>

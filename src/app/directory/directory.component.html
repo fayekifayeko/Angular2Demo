@@ -1,0 +1,52 @@
+<form id="addperson">
+  <input type="text" name="name" [(ngModel)]="name"/>
+  <input type="text" name="family" [(ngModel)]="family"/>
+  <button (click)="postdatatofirebase(name,family)">add person to firebase</button>
+</form>
+
+<ul id="personslist" style="padding:0px;">
+<li *ngFor="let person of persons" style="padding:0px;">
+<div id="divplist" style="padding:0px;">
+  <span style="padding:0px;">{{person.name}}</span>
+  <span style="padding:0px;">{{person.family}}</span>
+</div>
+</li>
+</ul>
+
+
+
+
+<button (click)="logit()">log</button>
+<form id="myform">
+
+<label>filter players by name</label>
+<input type="text" name="term" [(ngModel)]="term" />
+</form>
+<p [ngClass]="myclass">
+  directory works!
+</p>
+<p>{{id}}</p>
+
+<h1>Players List</h1>
+<ul id="playerlist">
+<li *ngFor="let player of players | filter:term">
+<div id="divlist">
+  <span [ngStyle]="{background:player.belt}">{{player.belt}}</span>
+  <h2>{{player.name|uppercase}}</h2>
+</div>
+</li>
+</ul>
+
+<p *ngIf="test">only show if property test in the component is true</p>
+<style>
+.red{
+  color:red;
+}
+
+.blue{
+  color:blue;
+}
+.underline{
+  text-decoration: underline;;
+}
+</style>
